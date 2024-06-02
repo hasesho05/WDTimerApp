@@ -1,4 +1,13 @@
 export type MyList = {
+  id: number
+  icon?: string
   title: string
-  tasks: { name: string; duration: number }[]
+  tasks: Task[]
+  isSelected?: boolean
+}
+
+export type Task = {
+  id: number
+  name: string
+  duration: number
 }

@@ -1,7 +1,6 @@
-import { StatusBar } from 'expo-status-bar'
-import { Redirect, Tabs } from 'expo-router'
+import { Tabs } from 'expo-router'
 import { Image, ImageSourcePropType, Text, View } from 'react-native'
-import { icons } from '../../../constants'
+import { icons } from '../../constants'
 
 const TabIcon = ({
   icon,
@@ -32,7 +31,7 @@ const TabIcon = ({
   )
 }
 
-const TabLayout = () => {
+const Footer = () => {
   return (
     <>
       <Tabs
@@ -95,10 +94,8 @@ const TabLayout = () => {
           }}
         />
       </Tabs>
-
-      <StatusBar backgroundColor="#161622" style="light" />
     </>
   )
 }
 
-export default TabLayout
+export default Footer

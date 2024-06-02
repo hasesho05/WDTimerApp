@@ -12,16 +12,28 @@ import eyeHide from '../assets/icons/eye-hide.png'
 import eye from '../assets/icons/eye.png'
 import play from '../assets/icons/play.png'
 import timer from '../assets/icons/timer.png'
+import pause from '../assets/icons/pause.png'
+import next from '../assets/icons/next.png'
+import playOrange from '../assets/icons/play-orange.png'
+import settings from '../assets/icons/settings.png'
+import duplicate from '../assets/icons/duplicate.png'
+import deleteIcon from '../assets/icons/delete.png'
 
 export default {
   play,
+  playOrange,
+  duplicate,
+  deleteIcon,
   bookmark,
   home,
+  pause,
   plus,
   profile,
   leftArrow,
   menu,
+  next,
   search,
+  settings,
   upload,
   rightArrow,
   logout,

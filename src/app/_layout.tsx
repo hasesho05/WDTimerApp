@@ -12,6 +12,7 @@ import PoppinsRegular from '../../assets/fonts/Poppins-Regular.ttf'
 import PoppinsSemiBold from '../../assets/fonts/Poppins-SemiBold.ttf'
 import PoppinsThin from '../../assets/fonts/Poppins-Thin.ttf'
 import InitialSplashScreen from '../components/SplashScreen'
+import Toast from 'react-native-toast-message'
 
 SplashScreen.preventAutoHideAsync()
 
@@ -35,9 +36,8 @@ const RootLayout = () => {
   }, [fontsLoaded])
 
   if (error) {
-    // エラーハンドリングの処理を追加
     console.error('Failed to load fonts:', error)
-    return null // または適切なエラー表示コンポーネントを返す
+    return null
   }
 
   if (!fontsLoaded) {
@@ -45,14 +45,38 @@ const RootLayout = () => {
   }
 
   return (
-    <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+    <>
       <Stack>
-        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="index"
+          options={{
+            title: 'WD計測タイマー',
+            headerStyle: { backgroundColor: '#f4511e' },
+            headerTintColor: '#fff',
+            headerTitleStyle: { fontWeight: 'bold' },
+          }}
+        />
+        <Stack.Screen
+          name="(list-details)"
+          options={{
+            title: 'リストの詳細',
+            headerStyle: { backgroundColor: '#f4511e' },
+            headerTintColor: '#fff',
+            headerTitleStyle: { fontWeight: 'bold' },
+          }}
+        />
+        <Stack.Screen
+          name="(settings)"
+          options={{
+            title: '設定',
+            headerStyle: { backgroundColor: '#f4511e' },
+            headerTintColor: '#fff',
+            headerTitleStyle: { fontWeight: 'bold' },
+          }}
+        />
       </Stack>
-    </View>
+    </>
   )
 }
 
 export default RootLayout
-
-const styles = StyleSheet.create({})

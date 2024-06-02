@@ -5,7 +5,7 @@ interface CustomButtonProps {
   handlePress: () => void
   containerStyles?: string
   textStyles?: string
-  isLoading: boolean
+  isLoading?: boolean
 }
 
 const CustomButton = ({
@@ -13,13 +13,13 @@ const CustomButton = ({
   handlePress,
   containerStyles = '',
   textStyles = '',
-  isLoading,
+  isLoading = false,
 }: CustomButtonProps) => {
   return (
     <TouchableOpacity
       onPress={handlePress}
       activeOpacity={0.7}
-      className={`bg-secondary rounded-xl min-h-[62px] flex flex-row justify-center items-center ${containerStyles} ${
+      className={`bg-secondary rounded-xl min-h-[50px] flex flex-row justify-center items-center px-2 ${containerStyles} ${
         isLoading ? 'opacity-50' : ''
       }`}
       disabled={isLoading}
